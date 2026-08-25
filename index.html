@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Mishi - Mousses</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div class="poster-container">
+
+    <!-- HEADER -->
+    <header class="flex flex-col sm:flex-row justify-between items-center sm:items-start text-center sm:text-left gap-6 sm:gap-0 pt-10 sm:pt-16 px-6 sm:px-12 md:px-16 mb-8">
+        <div class="max-w-md">
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-brand-dark font-bold tracking-wider mb-2">M I S H I</h1>
+            <h2 class="font-sans text-lg md:text-xl text-brand-brown tracking-[0.3em] uppercase mb-6">Repostería</h2>
+
+            <div class="w-12 h-[1px] bg-brand-dark mb-4 mx-auto sm:mx-0"></div>
+
+            <p class="font-sans text-xs text-gray-500 tracking-widest uppercase leading-relaxed">
+                Ingredientes Simples.<br>
+                Pura Indulgencia.<br>
+                Selección de Mousses.
+            </p>
+        </div>
+
+        <div class="flex flex-col items-center mt-2">
+            <!-- Icono decorativo estilo cupcake/postre -->
+            <svg class="w-12 h-12 text-brand-dark mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M21 15c0-4.418-4.03-8-9-8s-9 3.582-9 8m18 0v2a3 3 0 01-3 3H7a3 3 0 01-3-3v-2m18 0h-4.5m-9 0H4.5m4.5-9V4.5a1.5 1.5 0 013 0V6m-3 0h3m-3 0a3 3 0 00-3 3v3m9-6a3 3 0 013 3v3"></path>
+            </svg>
+            <span class="font-serif italic text-sm text-brand-dark">Arsticeria</span>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT GRID -->
+    <main class="flex-grow grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 px-6 sm:px-8 md:px-16 pb-16 sm:pb-24 md:pb-32">
+
+        <!-- LEFT COLUMN: Pill Shape with Images (click para ampliar) -->
+        <div class="md:col-span-4 flex justify-center pt-2 md:pt-4">
+            <div class="bg-brand-beige rounded-t-[150px] rounded-b-[150px] w-full max-w-[220px] sm:max-w-[200px] flex flex-col items-center py-8 sm:py-10 gap-5 sm:gap-6">
+                <!-- Imagen 1: Mango -->
+                <img src="imagen/mango.jpeg" alt="Mousse de Mango" loading="lazy" decoding="async" data-ingredients="Base de galleta|Mousse de mango natural|Crema chantilly encima" class="gallery-img w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-full border-[3px] border-white shadow-lg z-10">
+                <!-- Imagen 2: Maracuyá -->
+                <img src="imagen/maracuya.jpeg" alt="Mousse de Maracuyá" loading="lazy" decoding="async" data-ingredients="Base de galleta|Mousse de maracuyá|Mermelada de maracuyá encima" class="gallery-img w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-full border-[3px] border-white shadow-lg z-10">
+                <!-- Imagen 3: Naranja -->
+                <img src="imagen/naranja.jpeg" alt="Mousse de Naranja" loading="lazy" decoding="async" data-ingredients="Base de galleta|Mousse de naranja|Capa de chocolate" class="gallery-img w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-full border-[3px] border-white shadow-lg z-10">
+                <!-- Imagen 4: Lulo -->
+                <img src="imagen/lulo.jpeg" alt="Mousse de Lulo" loading="lazy" decoding="async" data-ingredients="Base de galleta|Mousse de lulo|Lulo picado bañado en leche condensada" class="gallery-img w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-full border-[3px] border-white shadow-lg z-10">
+                <!-- Imagen 5: Fresa -->
+                <img src="imagen/fresa.jpeg" alt="Mousse de Fresa" loading="lazy" decoding="async" data-ingredients="Base de galleta|Mousse de fresa|Fresa finamente picada bañada en chocolate" class="gallery-img w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover rounded-full border-[3px] border-white shadow-lg z-10">
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Text List -->
+        <div class="md:col-span-8 flex flex-col justify-between gap-8 md:gap-0 py-2 md:py-6">
+
+            <!-- Item 01 -->
+            <div class="flex gap-4">
+                <span class="font-sans text-sm md:text-base text-gray-400 mt-1">01</span>
+                <div class="flex-grow">
+                    <h3 class="font-sans text-sm md:text-base tracking-[0.2em] text-brand-dark uppercase font-semibold mb-3">
+                        Mousse de<br>Mango
+                    </h3>
+                    <p class="font-sans text-xs text-gray-500 leading-relaxed pr-4">
+                        Suave y cremoso postre que resalta el dulce y vibrante sabor del mango fresco sobre una base crujiente.
+                    </p>
+                    <div class="line-with-dot"></div>
+                </div>
+            </div>
+
+            <!-- Item 02 -->
+            <div class="flex gap-4">
+                <span class="font-sans text-sm md:text-base text-gray-400 mt-1">02</span>
+                <div class="flex-grow">
+                    <h3 class="font-sans text-sm md:text-base tracking-[0.2em] text-brand-dark uppercase font-semibold mb-3">
+                        Mousse de<br>Maracuyá
+                    </h3>
+                    <p class="font-sans text-xs text-gray-500 leading-relaxed pr-4">
+                        El equilibrio perfecto entre lo dulce y lo ácido, coronado con una deliciosa jalea artesanal de la fruta de la pasión.
+                    </p>
+                    <div class="line-with-dot"></div>
+                </div>
+            </div>
+
+            <!-- Item 03 -->
+            <div class="flex gap-4">
+                <span class="font-sans text-sm md:text-base text-gray-400 mt-1">03</span>
+                <div class="flex-grow">
+                    <h3 class="font-sans text-sm md:text-base tracking-[0.2em] text-brand-dark uppercase font-semibold mb-3">
+                        Mousse de<br>Naranja
+                    </h3>
+                    <p class="font-sans text-xs text-gray-500 leading-relaxed pr-4">
+                        Postre maravillosamente ligero y vibrante que captura la esencia pura de la naranja fresca.
+                    </p>
+                    <div class="line-with-dot"></div>
+                </div>
+            </div>
+
+            <!-- Item 04 -->
+            <div class="flex gap-4">
+                <span class="font-sans text-sm md:text-base text-gray-400 mt-1">04</span>
+                <div class="flex-grow">
+                    <h3 class="font-sans text-sm md:text-base tracking-[0.2em] text-brand-dark uppercase font-semibold mb-3">
+                        Mousse de<br>Lulo
+                    </h3>
+                    <p class="font-sans text-xs text-gray-500 leading-relaxed pr-4">
+                        La acidez característica y exótica del lulo transformada en un postre irresistiblemente cremoso.
+                    </p>
+                    <div class="line-with-dot"></div>
+                </div>
+            </div>
+
+            <!-- Item 05 -->
+            <div class="flex gap-4">
+                <span class="font-sans text-sm md:text-base text-gray-400 mt-1">05</span>
+                <div class="flex-grow">
+                    <h3 class="font-sans text-sm md:text-base tracking-[0.2em] text-brand-dark uppercase font-semibold mb-3">
+                        Mousse de<br>Fresa
+                    </h3>
+                    <p class="font-sans text-xs text-gray-500 leading-relaxed pr-4">
+                        El clásico que nunca falla. Esponjoso, con fresas naturales y un sabor dulce y delicado.
+                    </p>
+                    <div class="line-with-dot" style="margin-bottom: 0;"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-footer text-white w-full py-8 px-6 mt-auto relative">
+
+        <!-- Order Info Badge (Overlapping) -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 -top-4 bg-brand-brown border-4 border-white text-[10px] sm:text-xs text-white uppercase tracking-widest px-4 sm:px-6 py-1 rounded-full whitespace-nowrap">
+            Información de Pedidos:
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-around items-center gap-4 mt-2">
+            <!-- Teléfono -->
+            <div class="flex items-center gap-3">
+                <div class="bg-white text-brand-footer rounded-full w-8 h-8 flex items-center justify-center shrink-0">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <span class="font-sans text-sm tracking-wider">316 373 2671</span>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="flex items-center gap-3">
+                <div class="bg-white text-brand-footer rounded-full w-8 h-8 flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <span class="font-sans text-sm tracking-wider">Cúcuta, Colombia</span>
+            </div>
+
+            <!-- Redes -->
+            <div class="flex items-center gap-3">
+                <div class="bg-white text-brand-footer rounded-full w-8 h-8 flex items-center justify-center shrink-0">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <span class="font-sans text-sm tracking-wider">@mishi_arsticeria</span>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- LIGHTBOX: visor de imagen ampliada -->
+<div id="lightbox-overlay" class="lightbox-overlay" aria-hidden="true">
+    <div class="lightbox-content">
+        <button id="lightbox-close" type="button" class="lightbox-close" aria-label="Cerrar imagen ampliada">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="lightbox-flip-card" class="lightbox-flip-card" tabindex="0" role="button" aria-label="Toca la foto para ver los ingredientes">
+            <div class="lightbox-flip-inner">
+                <div class="lightbox-face lightbox-face-front">
+                    <img id="lightbox-img" src="" alt="">
+                    <span class="lightbox-flip-icon" aria-hidden="true"><i class="fa-solid fa-rotate"></i></span>
+                </div>
+                <div class="lightbox-face lightbox-face-back">
+                    <h3 id="lightbox-ing-title" class="lightbox-ing-title"></h3>
+                    <ul id="lightbox-ing-list" class="lightbox-ing-list"></ul>
+                </div>
+            </div>
+        </div>
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+</div>
+
+</body>
+</html>
