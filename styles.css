@@ -19,6 +19,49 @@ body {
     flex-direction: column;
 }
 
+/* ===== Grid del menú: cada foto queda alineada con su propio texto ===== */
+.menu-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+@media (min-width: 640px) {
+    .menu-images {
+        gap: 1.5rem;
+    }
+}
+@media (min-width: 768px) {
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: repeat(5, auto);
+        column-gap: 2rem;
+    }
+    .menu-images {
+        grid-column: span 4;
+        grid-row: 1 / -1;
+        display: grid;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+        justify-items: center;
+        align-items: center;
+    }
+    .menu-text {
+        grid-column: span 8;
+        grid-row: 1 / -1;
+        display: grid;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+        align-items: center;
+    }
+}
+
 /* Línea decorativa con punto al final */
 .line-with-dot {
     position: relative;
@@ -117,7 +160,7 @@ body {
 .lightbox-face-front img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 .lightbox-flip-icon {

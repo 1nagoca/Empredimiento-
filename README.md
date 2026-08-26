@@ -9,12 +9,12 @@ Empredimiento/
 ├── index.html                    # Estructura de la página (HTML)
 ├── styles.css                   # Estilos personalizados (lightbox, layout, ajustes responsive)
 ├── script.js                    # Config de Tailwind + lógica del visor de imágenes
-├── imagen/                      # Fotos reales de cada mousse
-│   ├── mango.jpeg
-│   ├── maracuya.jpeg
-│   ├── naranja.jpeg
-│   ├── lulo.jpeg
-│   └── fresa.jpeg
+├── imagen/                      # Fotos reales de cada mousse (fondo transparente)
+│   ├── mango.webp
+│   ├── maracuya.webp
+│   ├── naranja.webp
+│   ├── lulo.webp
+│   └── fresa.webp
 └── README.md
 ```
 
@@ -37,6 +37,7 @@ y abrir `http://localhost:8731/index.html`.
 - **Ampliar foto (lightbox)**: clic o Enter/Espacio sobre cualquier foto la abre en grande. Se cierra con la X, tecla Escape o clic afuera.
 - **Voltear foto → ingredientes**: con la foto ampliada, un segundo clic la voltea (animación 3D) y muestra atrás una tarjeta con el nombre del sabor y su lista de ingredientes. Un tercer clic la regresa a la foto.
 - Los ingredientes de cada sabor están en el atributo `data-ingredients` de cada `<img>` en el HTML, separados por `|`.
+- **Fotos con fondo transparente**: las 5 fotos están recortadas (fondo negro original quitado, formato `.webp`) para que se vean flotando sobre el fondo beige de la píldora y sobre el blanco del visor ampliado.
 
 ## Ideas para mejorar a futuro
 
@@ -44,7 +45,7 @@ y abrir `http://localhost:8731/index.html`.
 - **Pedido directo por WhatsApp**: convertir el número del footer en un link `https://wa.me/57316...` que abra un chat con un mensaje predefinido, en vez de solo mostrar el texto.
 - **Link real de Instagram**: el `@mishi_arsticeria` del footer no es un link clickeable todavía.
 - **Editar ingredientes sin tocar código**: mover los ingredientes/descripciones a un archivo `data.json` y que el JS los lea, para que se puedan actualizar sin editar HTML.
-- **Optimizar imágenes**: las fotos actuales pesan entre 38–104 KB; se pueden comprimir/convertir a `.webp` para que cargue más rápido en datos móviles.
+- **Imágenes responsive**: ya están en `.webp` y livianas (~50–85 KB c/u); se podría afinar más con `srcset` para servir un tamaño distinto según el dispositivo.
 - **SEO y compartir en redes**: agregar `<meta>` de Open Graph (título, descripción, imagen de portada) para que se vea bien al compartir el link en WhatsApp/Instagram, y un favicon.
 - **Más sabores o productos**: si se agregan nuevos mousses u otros postres, replicar el mismo patrón (imagen con `data-ingredients` + bloque de texto numerado).
 - **Analítica básica**: saber cuántas personas visitan el menú (ej. Google Analytics o Plausible).
