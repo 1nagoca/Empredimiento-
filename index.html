@@ -34,11 +34,7 @@
         </div>
 
         <div class="flex flex-col items-center mt-2">
-            <!-- Icono decorativo estilo cupcake/postre -->
-            <svg class="w-12 h-12 text-brand-dark mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M21 15c0-4.418-4.03-8-9-8s-9 3.582-9 8m18 0v2a3 3 0 01-3 3H7a3 3 0 01-3-3v-2m18 0h-4.5m-9 0H4.5m4.5-9V4.5a1.5 1.5 0 013 0V6m-3 0h3m-3 0a3 3 0 00-3 3v3m9-6a3 3 0 013 3v3"></path>
-            </svg>
-            <span class="font-serif italic text-sm text-brand-dark">Arsticeria</span>
+            <img src="imagen/logo.jpeg" alt="Logo Mishi Pâtisserie" loading="lazy" decoding="async" class="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-full shadow-md">
         </div>
     </header>
 
@@ -145,12 +141,12 @@
 
         <div class="flex flex-col md:flex-row justify-around items-center gap-4 mt-2">
             <!-- Teléfono -->
-            <div class="flex items-center gap-3">
+            <a href="https://wa.me/573163732671?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20mousses" target="_blank" rel="noopener" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
                 <div class="bg-white text-brand-footer rounded-full w-8 h-8 flex items-center justify-center shrink-0">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <span class="font-sans text-sm tracking-wider">316 373 2671</span>
-            </div>
+            </a>
 
             <!-- Ubicación -->
             <div class="flex items-center gap-3">
@@ -159,18 +155,15 @@
                 </div>
                 <span class="font-sans text-sm tracking-wider">Cúcuta, Colombia</span>
             </div>
-
-            <!-- Redes -->
-            <div class="flex items-center gap-3">
-                <div class="bg-white text-brand-footer rounded-full w-8 h-8 flex items-center justify-center shrink-0">
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-                <span class="font-sans text-sm tracking-wider">@mishi_arsticeria</span>
-            </div>
         </div>
     </footer>
 
 </div>
+
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<a href="https://wa.me/573163732671?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20mousses" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Pedir por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <!-- LIGHTBOX: visor de imagen ampliada -->
 <div id="lightbox-overlay" class="lightbox-overlay" aria-hidden="true">
