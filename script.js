@@ -36,15 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const CAPTION_BACK = 'Toca para volver a la foto';
 
     let lastFocused = null;
+    let currentHasIngredients = true;
 
     function openLightbox(imgEl) {
         lastFocused = document.activeElement;
         overlayImg.src = imgEl.src;
         overlayImg.alt = imgEl.alt;
 
+        const ingredientsRaw = (imgEl.dataset.ingredients || '').trim();
+        currentHasIngredients = ingredientsRaw.length > 0;
+
         ingTitle.textContent = imgEl.alt;
         ingList.innerHTML = '';
-        (imgEl.dataset.ingredients || '')
+        ingredientsRaw
             .split('|')
             .map((item) => item.trim())
             .filter(Boolean)
@@ -55,7 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         flipCard.classList.remove('is-flipped');
-        overlayCaption.textContent = CAPTION_FRONT;
+        flipCard.classList.toggle('no-flip', !currentHasIngredients);
+        flipCard.setAttribute('aria-label', currentHasIngredients ? 'Toca la foto para ver los ingredientes' : `Imagen ampliada: ${imgEl.alt}`);
+        overlayCaption.textContent = currentHasIngredients ? CAPTION_FRONT : imgEl.alt;
 
         overlay.classList.add('is-open');
         overlay.setAttribute('aria-hidden', 'false');
@@ -73,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function toggleFlip() {
+        if (!currentHasIngredients) return;
         const flipped = flipCard.classList.toggle('is-flipped');
         overlayCaption.textContent = flipped ? CAPTION_BACK : CAPTION_FRONT;
     }
